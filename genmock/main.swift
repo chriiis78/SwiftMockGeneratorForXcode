@@ -10,7 +10,7 @@ func validateTemplateName(_ templateName: String) throws -> String {
     return templateName
 }
 
-let validTemplateNames = ["spy", "stub", "dummy", "partial"]
+let validTemplateNames = ["customspy", "spy", "stub", "dummy", "partial"]
 var formattedValidTemplateNames: String = validTemplateNames.joined(separator: "|")
 
 command(

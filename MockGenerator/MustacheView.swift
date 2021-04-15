@@ -49,6 +49,7 @@ extension UseCasesPropertyViewModel {
     fileprivate func toDictionary() -> NSDictionary {
         let dictionary = NSMutableDictionary()
         dictionary["name"] = name
+        dictionary["uniqueName"] = capitalizedUniqueName.lowercasingFirst
         dictionary["capitalizedUniqueName"] = capitalizedUniqueName
         dictionary["hasSetter"] = hasSetter
         dictionary["type"] = type
@@ -68,6 +69,7 @@ extension UseCasesMethodViewModel {
 
     fileprivate func toDictionary() -> NSDictionary {
         let dictionary = NSMutableDictionary()
+        dictionary["uniqueName"] = capitalizedUniqueName.lowercasingFirst
         dictionary["capitalizedUniqueName"] = capitalizedUniqueName
         dictionary["closureParameter"] = closureParameter.map { $0.toDictionary() }
         if let escapingParameters = escapingParameters {
@@ -130,6 +132,7 @@ extension UseCasesSubscriptViewModel {
 
     fileprivate func toDictionary() -> NSDictionary {
         let dictionary = NSMutableDictionary()
+        dictionary["uniqueName"] = capitalizedUniqueName.lowercasingFirst
         dictionary["capitalizedUniqueName"] = capitalizedUniqueName
         if let escapingParameters = escapingParameters {
             dictionary["escapingParameters"] = escapingParameters.toDictionary()
@@ -142,5 +145,30 @@ extension UseCasesSubscriptViewModel {
         dictionary["isImplemented"] = isImplemented
         dictionary["declarationText"] = declarationText
         return dictionary
+    }
+}
+
+fileprivate let badChars = CharacterSet.alphanumerics.inverted
+
+extension String {
+    var uppercasingFirst: String {
+        return prefix(1).uppercased() + dropFirst()
+    }
+
+    var lowercasingFirst: String {
+        return prefix(1).lowercased() + dropFirst()
+    }
+
+    var camelized: String {
+        guard !isEmpty else {
+            return ""
+        }
+
+        let parts = self.components(separatedBy: badChars)
+
+        let first = String(describing: parts.first!).lowercasingFirst
+        let rest = parts.dropFirst().map({String($0).uppercasingFirst})
+
+        return ([first] + rest).joined(separator: "")
     }
 }

@@ -44,6 +44,14 @@
 			<array>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).CustomSpyCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).customspy</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Generate custom spy</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SpyCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>$(PRODUCT_BUNDLE_IDENTIFIER).spy</string>

@@ -95,6 +95,8 @@
 		35CDFCCC54AA20F2E8E375D6 /* TypeDeclarationTransformingVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CDF6D840276DE36906BC4C /* TypeDeclarationTransformingVisitor.swift */; };
 		35CDFD1935A027AD6624A741 /* VariableTypeResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CDFFCFBA4A510F93250CFF /* VariableTypeResolverTests.swift */; };
 		35CDFF1EBDCD49B97A999ABA /* ManualProjectPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CDF41BB007A5C1F4180748 /* ManualProjectPathView.swift */; };
+		6BB5AB3E2628BC3700A40C74 /* customspy.moustache in Resources */ = {isa = PBXBuildFile; fileRef = 6BB5AB3D2628BC3700A40C74 /* customspy.moustache */; };
+		6BB5AB432628BC5800A40C74 /* CustomSpyCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB5AB422628BC5800A40C74 /* CustomSpyCommand.swift */; };
 		BF14E748254C57D90010956B /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F866EF20D90C3A00E79758 /* XcodeKit.framework */; };
 		BF14E749254C57D90010956B /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14F866EF20D90C3A00E79758 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -346,6 +348,8 @@
 		35CDFFCFBA4A510F93250CFF /* VariableTypeResolverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariableTypeResolverTests.swift; sourceTree = "<group>"; };
 		35CDFFDBE599C4E0238A240C /* StubCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubCommand.swift; sourceTree = "<group>"; };
 		35CDFFDC332CE5615DA47863 /* VariableTypeResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariableTypeResolver.swift; sourceTree = "<group>"; };
+		6BB5AB3D2628BC3700A40C74 /* customspy.moustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = customspy.moustache; sourceTree = "<group>"; };
+		6BB5AB422628BC5800A40C74 /* CustomSpyCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSpyCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,6 +411,7 @@
 				35CDF2EF71ED0A21E89CBC94 /* dummy.mustache */,
 				149CF792217B115A005892B4 /* partial.mustache */,
 				35CDFE70EECA508E4E1A6742 /* spy.mustache */,
+				6BB5AB3D2628BC3700A40C74 /* customspy.moustache */,
 				35CDF512D0EA7664390189DC /* stub.mustache */,
 				14276C641F4F312E00EA7753 /* Info.plist */,
 				1453D0BE2444A78500340789 /* Error.swift */,
@@ -540,6 +545,7 @@
 				149CF7B4217B1301005892B4 /* PartialSpyCommand.swift */,
 				14CA2D701F40009000900937 /* SourceEditorExtension.swift */,
 				35CDFE154C81653EC7127630 /* SpyCommand.swift */,
+				6BB5AB422628BC5800A40C74 /* CustomSpyCommand.swift */,
 				35CDFFDBE599C4E0238A240C /* StubCommand.swift */,
 				14BF416F242CB75A00036B25 /* TextBufferImpl.swift */,
 				14F866EB20D90BC500E79758 /* XcodeKit+Transformers.swift */,
@@ -761,7 +767,7 @@
 					};
 					1453D09C24425C5900340789 = {
 						CreatedOnToolsVersion = 11.4;
-						DevelopmentTeam = HU45578K6L;
+						DevelopmentTeam = CSWRZK8BHU;
 						ProvisioningStyle = Automatic;
 					};
 					14872E7A1F59DBC50017AF3F = {
@@ -772,7 +778,7 @@
 					};
 					14CA2D521F40007000900937 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = HU45578K6L;
+						DevelopmentTeam = CSWRZK8BHU;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -789,7 +795,7 @@
 					};
 					14CA2D681F40008F00900937 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = HU45578K6L;
+						DevelopmentTeam = CSWRZK8BHU;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
@@ -834,6 +840,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BB5AB3E2628BC3700A40C74 /* customspy.moustache in Resources */,
 				35CDF75348948FB1299E08E1 /* dummy.mustache in Resources */,
 				149CF7B3217B115B005892B4 /* partial.mustache in Resources */,
 				35CDF049C3AFB0095D61A0F0 /* stub.mustache in Resources */,
@@ -990,6 +997,7 @@
 				14BEF522242FBFF600E39F4D /* Preferences.swift in Sources */,
 				14BEF520242FBFB800E39F4D /* XcodeKit+Transformers.swift in Sources */,
 				149CF7B5217B1301005892B4 /* PartialSpyCommand.swift in Sources */,
+				6BB5AB432628BC5800A40C74 /* CustomSpyCommand.swift in Sources */,
 				14BEF523242FBFFD00E39F4D /* XcodeProjectPathFinder.swift in Sources */,
 				14BEF521242FBFEC00E39F4D /* ProjectFinder.swift in Sources */,
 			);
@@ -1186,7 +1194,7 @@
 				CODE_SIGN_ENTITLEMENTS = genmock/genmock.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HU45578K6L;
+				DEVELOPMENT_TEAM = CSWRZK8BHU;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1204,7 +1212,7 @@
 				CODE_SIGN_ENTITLEMENTS = genmock/genmock.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HU45578K6L;
+				DEVELOPMENT_TEAM = CSWRZK8BHU;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1280,7 +1288,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = HU45578K6L;
+				DEVELOPMENT_TEAM = CSWRZK8BHU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1288,7 +1296,7 @@
 				);
 				INFOPLIST_FILE = MockGeneratorApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = codes.seanhenry.MockGeneratorApp.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = chris78.MockGeneratorApp.debug;
 				PRODUCT_MODULE_NAME = MockGeneratorApp;
 				PRODUCT_NAME = "Swift Mock Generator for Xcode";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1302,10 +1310,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MockGeneratorApp/MockGeneratorApp.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = HU45578K6L;
+				DEVELOPMENT_TEAM = CSWRZK8BHU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1313,10 +1321,10 @@
 				);
 				INFOPLIST_FILE = MockGeneratorApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = codes.seanhenry.MockGeneratorApp;
+				PRODUCT_BUNDLE_IDENTIFIER = chris78.MockGeneratorApp;
 				PRODUCT_MODULE_NAME = MockGeneratorApp;
 				PRODUCT_NAME = "Swift Mock Generator for Xcode";
-				PROVISIONING_PROFILE_SPECIFIER = "Mock Generator Developer ID";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -1328,7 +1336,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = HU45578K6L;
+				DEVELOPMENT_TEAM = CSWRZK8BHU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1342,7 +1350,7 @@
 					"-framework",
 					SwiftToolkit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = codes.seanhenry.MockGeneratorApp.debug.XcodePlugin;
+				PRODUCT_BUNDLE_IDENTIFIER = chris78.MockGeneratorApp.debug.XcodePlugin;
 				PRODUCT_NAME = "Mock Generator";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1354,10 +1362,10 @@
 			baseConfigurationReference = 191EF6A520F451D100118C74 /* Release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = XcodePlugin/XcodePlugin.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = HU45578K6L;
+				DEVELOPMENT_TEAM = CSWRZK8BHU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1370,9 +1378,9 @@
 					"-framework",
 					SwiftToolkit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = codes.seanhenry.MockGeneratorApp.XcodePlugin;
+				PRODUCT_BUNDLE_IDENTIFIER = chris78.MockGeneratorApp.XcodePlugin;
 				PRODUCT_NAME = "Mock Generator";
-				PROVISIONING_PROFILE_SPECIFIER = "Mock Generator Extension Developer ID";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
